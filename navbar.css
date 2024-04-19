@@ -13,13 +13,14 @@ nav {
   width: 100%;
   background: none;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 1s ease; /* 배경색 변경에 대한 부드러운 전환 효과 추가 */
 }
 
 nav .wrapper {
   position: relative;
   max-width: 1300px;
   padding: 0px 30px;
-  height: 70px;
+  height: 5rem;
   line-height: 70px;
   margin: auto;
   display: flex;
@@ -29,7 +30,7 @@ nav .wrapper {
 
 .wrapper .logo a {
   color: #f2f2f2;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -53,7 +54,7 @@ nav .wrapper {
 }
 
 .nav-links li a:hover {
-  background: #8ce0fa;
+  background: #8C8C8C;
 }
 
 .nav-links .mobile-item {
@@ -62,7 +63,7 @@ nav .wrapper {
 
 .nav-links .drop-menu {
   position: absolute;
-  background: #ba83ca;
+  background: black;
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -98,7 +99,7 @@ nav .wrapper {
 }
 
 .mega-box .content {
-  background: #ba83ca;
+  background: black;
   padding: 25px 20px;
   display: flex;
   width: 100%;
@@ -140,10 +141,6 @@ nav .wrapper {
   display: block;
 }
 
-.row .mega-links li a:hover {
-  color: #f2f2f2;
-}
-
 .wrapper .btn {
   color: #fff;
   font-size: 20px;
@@ -161,12 +158,11 @@ nav .wrapper {
   .wrapper .btn {
     display: block;
     font-size: 3rem;
-    margin-top: 3rem;
   }
 
   .wrapper .nav-links {
     position: fixed;
-    background-color: #ba72a4;
+    background-color: black;
     width: 100vw;
     height: 100vh;
     bottom: -100%;
@@ -253,7 +249,7 @@ nav .wrapper {
   }
 
   .nav-links .mobile-item:hover {
-    background: #8ce0fa;
+    background: #8C8C8C;
   }
 
   .drop-menu li {
