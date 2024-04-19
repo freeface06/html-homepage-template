@@ -1,5 +1,4 @@
 .custom-shape-divider-bottom-1713415657 {
-    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     height: 500px;
     position: absolute;
     top: 0;
@@ -8,6 +7,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    animation: color-change-5x 8s linear infinite alternate both;
 }
 
 .custom-shape-divider-bottom-1713415657 svg {
@@ -20,3 +20,21 @@
 .custom-shape-divider-bottom-1713415657 .shape-fill {
     fill: #FFFFFF;
 }
+
+@keyframes color-change-5x {
+    0% {
+      background: #19dcea;
+    }
+    25% {
+      background: #b22cff;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+      background: #f5be10;
+    }
+    100% {
+      background: #3bd80d;
+    }
+  }
