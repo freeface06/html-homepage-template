@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -78,11 +80,48 @@
     </div>
   </nav>
 
-  <div class="custom-shape-divider-bottom-1713415657">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-    </svg>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('./assets/images/back1.png');"></div>
+      <div class="swiper-slide" style="background-image: url('./assets/images/back2.png');"></div>
+      <div class="swiper-slide" style="background-image: url('./assets/images/back3.png');"></div>
+      <div class="swiper-slide" style="background-image: url('./assets/images/back4.png');"></div>
+      <div class="swiper-slide" style="background-image: url('./assets/images/back5.png');"></div>
+      <div class="swiper-slide" style="background-image: url('./assets/images/back6.png');"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
   </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        type: "progressbar",
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
 
 </body>
 

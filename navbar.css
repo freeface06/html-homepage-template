@@ -11,8 +11,8 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-
   background: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav .wrapper {
@@ -169,7 +169,8 @@ nav .wrapper {
     background-color: #ba72a4;
     width: 100vw;
     height: 100vh;
-    bottom: -100%;  /* 초기 위치를 화면 아래쪽 바깥으로 설정 */
+    bottom: -100%;
+    /* 초기 위치를 화면 아래쪽 바깥으로 설정 */
     left: 0;
     display: block;
     padding: 50px 10px;
